@@ -1,5 +1,6 @@
 package biomesoplenty.client.fog;
 
+import cpw.mods.fml.common.eventhandler.Event;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -15,7 +16,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.client.event.EntityViewRenderEvent.FogColors;
 import net.minecraftforge.client.event.EntityViewRenderEvent.FogDensity;
-import net.minecraftforge.client.event.EntityViewRenderEvent.RenderFogEvent;
 import net.minecraftforge.common.ForgeModContainer;
 
 import org.lwjgl.opengl.GL11;
@@ -25,7 +25,7 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class FogHandler 
 {
-	/*@SubscribeEvent
+	@SubscribeEvent
 	public void onGetFogColour(FogColors event)
 	{
 		if (event.entity instanceof EntityPlayer)
@@ -42,7 +42,7 @@ public class FogHandler
 
 			event.red = (colour >> 16 & 255) / 255.0F; event.green = (colour >> 8 & 255) / 255.0F; event.blue = (colour & 255) / 255.0F;
 		}
-	}*/
+	}
 	
     private static double fogX, fogZ;
 
@@ -113,7 +113,7 @@ public class FogHandler
         }
 	}*/
 
-	/*public static int getFogBlendColour(World world, int playerX, int playerY, int playerZ, int defaultColour)
+	public static int getFogBlendColour(World world, int playerX, int playerY, int playerZ, int defaultColour)
 	{
 		GameSettings settings = Minecraft.getMinecraft().gameSettings;
 		int[] ranges = ForgeModContainer.blendRanges;
@@ -157,5 +157,5 @@ public class FogHandler
 		int multiplier = (r / divider & 255) << 16 | (g / divider & 255) << 8 | b / divider & 255;
 
 		return multiplier;
-	}*/
+	}
 }
