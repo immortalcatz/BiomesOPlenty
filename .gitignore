@@ -37,3 +37,6 @@ src/minecraft/fmlversion.properties
 src/minecraft/fml_marker.cfg
 src/minecraft/fml_at.cfg
 build_number.properties
+out/
+run/
+.gradle/

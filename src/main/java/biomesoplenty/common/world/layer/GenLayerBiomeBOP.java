@@ -30,24 +30,24 @@ public class GenLayerBiomeBOP extends GenLayerBiome
 		this.biomeLists[2].addAll(BOPBiomeManager.overworldBiomes[2]);
 		this.biomeLists[3].addAll(BOPBiomeManager.overworldBiomes[3]);
 		
-		if (BiomeManager.getBiomes(BiomeManager.BiomeType.DESERT) != null)
+		if (BiomeManager.desertBiomes != null)
 		{
-            this.biomeLists[0].addAll(BiomeManager.getBiomes(BiomeManager.BiomeType.DESERT));
+            this.biomeLists[0].addAll(BiomeManager.desertBiomes);
         }
 
-        if (BiomeManager.getBiomes(BiomeManager.BiomeType.WARM) != null)
+        if (BiomeManager.warmBiomes != null)
         {
-            this.biomeLists[1].addAll(BiomeManager.getBiomes(BiomeManager.BiomeType.WARM));
+            this.biomeLists[1].addAll(BiomeManager.warmBiomes);
         }
 
-        if (BiomeManager.getBiomes(BiomeManager.BiomeType.COOL) != null)
+        if (BiomeManager.coolBiomes != null)
         {
-            this.biomeLists[2].addAll(BiomeManager.getBiomes(BiomeManager.BiomeType.COOL));
+            this.biomeLists[2].addAll(BiomeManager.coolBiomes);
         }
 
-        if (BiomeManager.getBiomes(BiomeManager.BiomeType.ICY) != null)
+        if (BiomeManager.icyBiomes != null)
         {
-            this.biomeLists[3].addAll(BiomeManager.getBiomes(BiomeManager.BiomeType.ICY));
+            this.biomeLists[3].addAll(BiomeManager.icyBiomes);
         }
 
         this.biomeLists[0].add(new BiomeEntry(BiomeGenBase.desert, 30));
